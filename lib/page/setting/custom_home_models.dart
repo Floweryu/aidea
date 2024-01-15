@@ -28,15 +28,8 @@ class CustomHomeModelsPage extends StatefulWidget {
 class _CustomHomeModelsPageState extends State<CustomHomeModelsPage> {
   List<ModelIndicatorInfo> models = [
     ModelIndicatorInfo(
-      modelId: "openai:gpt-3.5-turbo",
-      modelName: 'GPT-3.5',
-      description: '速度快，成本低',
-      icon: Icons.bolt,
-      activeColor: Colors.green,
-    ),
-    ModelIndicatorInfo(
       modelId: "openai:gpt-4",
-      modelName: 'GPT-4',
+      modelName: '北京大学-HealGPT',
       description: '能力强，更精准',
       icon: Icons.auto_awesome,
       activeColor: const Color.fromARGB(255, 120, 73, 223),

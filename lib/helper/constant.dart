@@ -42,7 +42,7 @@ const settingImglocToken = 'imgloc-token';
 const chatMessagePerPage = 300;
 const contextBreakKey = 'context-break';
 const defaultChatModel = 'gpt-3.5-turbo';
-const defaultChatModelName = 'GPT-3.5';
+const defaultChatModelName = '北京大学-HealGPT';
 const defaultImageModel = 'DALL·E';
 const defaultModelNotChatDesc = '该模型不支持上下文，只能一问一答';
 

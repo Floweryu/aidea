@@ -75,15 +75,8 @@ class _HomePageState extends State<HomePage> {
 
   List<ModelIndicatorInfo> models = [
     ModelIndicatorInfo(
-      modelId: "gpt-3.5-turbo",
-      modelName: 'GPT-3.5',
-      description: '速度快，成本低',
-      icon: Icons.bolt,
-      activeColor: Colors.green,
-    ),
-    ModelIndicatorInfo(
       modelId: "gpt-4",
-      modelName: 'GPT-4',
+      modelName: '北京大学-HealGPT',
       description: '能力强，更精准',
       icon: Icons.auto_awesome,
       activeColor: const Color.fromARGB(255, 120, 73, 223),
@@ -141,13 +134,26 @@ class _HomePageState extends State<HomePage> {
       Ability().updateCapabilities(cap);
 
       if (cap.homeModels.isNotEmpty) {
-        models = cap.homeModels
+        final homeModelss = [
+          {
+            "name": "北京大学—HealGPT",
+            "model_id": "gpt-4",
+            "desc": "能力强，更精准",
+            "color": "FF714BD7",
+            "powerful": true
+          }
+        ];
+
+        List<ModelIndicatorInfo> roomsLoadedList = homeModelss
+            .map((jsonObject) => ModelIndicatorInfo.fromJson(jsonObject))
+            .toList();
+        models = roomsLoadedList
             .map((e) => ModelIndicatorInfo(
                   modelId: e.modelId,
-                  modelName: e.name,
-                  description: e.desc,
-                  icon: e.powerful ? Icons.auto_awesome : Icons.bolt,
-                  activeColor: stringToColor(e.color),
+                  modelName: e.modelName,
+                  description: e.description,
+                  icon: Icons.auto_awesome,
+                  activeColor: e.activeColor,
                   supportVision: e.supportVision,
                 ))
             .toList();
@@ -850,7 +856,7 @@ class _HomePageState extends State<HomePage> {
                     matched.leftCount > 0 &&
                     matched.maxCount > 0) {
                   return Text(
-                    '今日还可免费畅享 ${matched.leftCount} 次',
+                    '',
                     style: TextStyle(
                       color: customColors.weakTextColor?.withAlpha(120),
                       fontSize: 11,

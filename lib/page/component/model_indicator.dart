@@ -17,6 +17,16 @@ class ModelIndicatorInfo {
     required this.activeColor,
     this.supportVision = false,
   });
+
+    static ModelIndicatorInfo fromJson(Map<String, dynamic> json) {
+    return ModelIndicatorInfo(
+        modelName: json['name'],
+        modelId: json['model_id'],
+        description: json['desc'] ?? '',
+        icon: json['powerful'] ?? '',
+        activeColor: json['color'],
+        supportVision: false);
+  }
 }
 
 class ModelIndicator extends StatelessWidget {

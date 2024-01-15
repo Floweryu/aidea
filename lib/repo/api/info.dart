@@ -64,21 +64,30 @@ class Capabilities {
   });
 
   factory Capabilities.fromJson(Map<String, dynamic> json) {
+    final homeModels = [
+      {
+        "name": "北京大学-HealGPT",
+        "model_id": "gpt-4",
+        "desc": "能力强，更精准",
+        "color": "FF714BD7",
+        "powerful": true
+      }
+    ];
     return Capabilities(
       applePayEnabled: json['apple_pay_enabled'] ?? false,
       otherPayEnabled: json['other_pay_enabled'] ?? false,
       translateEnabled: json['translate_enabled'] ?? false,
       mailEnabled: json['mail_enabled'] ?? false,
       openaiEnabled: json['openai_enabled'] ?? false,
-      homeModels: ((json['home_models'] ?? []) as List<dynamic>)
+      homeModels: ((homeModels))
           .map((e) => HomeModel.fromJson(e))
           .toList(),
       homeRoute: json['home_route'] ?? '/chat-chat',
       showHomeModelDescription: json['show_home_model_description'] ?? true,
       supportWebsocket: json['support_websocket'] ?? false,
       supportAPIKeys: json['support_api_keys'] ?? false,
-      disableGallery: json['disable_gallery'] ?? false,
-      disableCreationIsland: json['disable_creation_island'] ?? false,
+      disableGallery: true,
+      disableCreationIsland: true,
       disableDigitalHuman: json['disable_digital_human'] ?? false,
       disableChat: json['disable_chat'] ?? false,
       serviceStatusPage: json['service_status_page'] ?? '',
