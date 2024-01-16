@@ -21,6 +21,43 @@ class ChatChatBloc extends Bloc<ChatChatEvent, ChatChatState> {
       );
 
       var examples = await APIServer().example('openai:$defaultChatModel');
+      examples = <ChatExample>[];
+      final lists = [
+        {
+          "title": "嗓子痒咳嗽吃什么药效果快？",
+          "models": ["openai:gpt-", "文心千帆:", "讯飞星火:"]
+        },
+        {
+          "title": "感冒好了为何咳嗽老不好？",
+          "models": ["openai:gpt-", "文心千帆:", "讯飞星火:"]
+        },
+        {
+          "title": "为什么孩子会抑郁？",
+          "models": ["openai:gpt-", "文心千帆:", "讯飞星火:"]
+        },
+        {
+          "title": "冬季如何预防流感？",
+          "models": ["openai:gpt-", "文心千帆:", "讯飞星火:"]
+        },
+        {
+          "title": "肚子不舒服怎么办？",
+          "models": ["openai:gpt-", "文心千帆:", "讯飞星火:"]
+        },
+        {
+          "title": "发烧吃什么药？如何降温？",
+          "models": ["openai:gpt-", "文心千帆:", "讯飞星火:"]
+        },
+      ];
+
+      for (var example in lists) {
+        examples.add(ChatExample(
+          example['title'].toString(),
+          models: ((example['models'] ?? []) as List<dynamic>)
+              .map((e) => e.toString())
+              .toList(),
+        ));
+      }
+      
       // examples 随机排序
       examples.shuffle();
 

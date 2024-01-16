@@ -234,7 +234,7 @@ mixin AppLocale {
     robotIsThinkingMessage: '数字人正在思考中...',
     robotHasSomeError: '发送失败，重发该消息？',
     appName: 'AIdea',
-    chatAnywhere: '聊一聊',
+    chatAnywhere: '北京大学-HealGPT',
     homeTitle: '数字人',
     creativeIsland: '创作岛',
     settings: '设置',
