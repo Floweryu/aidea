@@ -175,6 +175,7 @@ class _HomePageState extends State<HomePage> {
     Cache().boolGet(key: 'show_home_free_model_message').then((show) async {
       if (show) {
         final promotions = await APIServer().notificationPromotionEvents();
+        promotions['chat_page'] = [];
         if (promotions['chat_page'] == null ||
             promotions['chat_page']!.isEmpty) {
           return;
