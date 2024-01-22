@@ -20,65 +20,15 @@ class SocialIconGroup extends StatelessWidget {
 
   final List<SocialItem> items = [
     SocialItem(
-      image: 'assets/app-256-transparent.png',
+      image: 'assets/app.png',
       name: '官方网站',
       onTap: () {
         launchUrlString(
-          'https://ai.aicode.cc/social/home',
+          'https://www.pku.edu.cn',
           mode: LaunchMode.externalApplication,
         );
       },
-    ),
-    SocialItem(
-      image: 'assets/weibo.png',
-      name: '新浪微博',
-      onTap: () {
-        launchUrlString(
-          'https://ai.aicode.cc/social/weibo',
-          mode: LaunchMode.externalApplication,
-        );
-      },
-    ),
-    SocialItem(
-      image: 'assets/wechat.png',
-      name: '微信公众号',
-      onTap: () {
-        launchUrlString(
-          'https://ai.aicode.cc/social/wechat-platform',
-          mode: LaunchMode.externalApplication,
-        );
-      },
-    ),
-    SocialItem(
-      image: 'assets/x.png',
-      name: 'Twitter(X)',
-      onTap: () {
-        launchUrlString(
-          'https://ai.aicode.cc/social/x',
-          mode: LaunchMode.externalApplication,
-        );
-      },
-    ),
-    SocialItem(
-      image: 'assets/github.png',
-      name: 'Github',
-      onTap: () {
-        launchUrlString(
-          'https://ai.aicode.cc/social/github',
-          mode: LaunchMode.externalApplication,
-        );
-      },
-    ),
-    SocialItem(
-      image: 'assets/xiaohongshu.png',
-      name: '小红书',
-      onTap: () {
-        launchUrlString(
-          'https://ai.aicode.cc/social/xiaohongshu',
-          mode: LaunchMode.externalApplication,
-        );
-      },
-    ),
+    )
   ];
 
   SocialIconGroup({
