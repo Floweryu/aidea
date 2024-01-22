@@ -318,7 +318,7 @@ class RoomBloc extends BlocExt<RoomEvent, RoomState> {
             "id": 66,
             "name": "中医门诊",
             "avatar_url":
-                "assets/zhongyi.jpg",
+                "https://img.erpweb.eu.org/imgs/2024/01/c212266e84cfb954.jpeg",
             "description":
                 "科大讯飞研发的认知大模型，V2.0 在 V1.5 基础上全面升级，并在代码、数学场景进行专项升级，服务已内嵌联网搜索、日期查询、天气查询、股票查询、诗词查询、字词理解等功能",
             "tags": ["全部", "大模型"]
@@ -327,7 +327,7 @@ class RoomBloc extends BlocExt<RoomEvent, RoomState> {
             "id": 60,
             "name": "营养师",
             "avatar_url":
-                "assets/yinyangshi.jpg",
+                "https://img.erpweb.eu.org/imgs/2024/01/949f4545d2f93631.jpeg",
             "description":
                 "由百度公司开发的聊天机器人，能够与人交互、回答问题及协作创作。4.0 版本为当前最强版本，据说问答能力不输 OpenAI 的 GPT-4",
             "tags": ["全部", "大模型"]
@@ -336,7 +336,7 @@ class RoomBloc extends BlocExt<RoomEvent, RoomState> {
             "id": 19,
             "name": "西医门诊",
             "avatar_url":
-                "assets/xiyi.jpg",
+                "https://img.erpweb.eu.org/imgs/2024/01/16555415a10099d9.jpeg",
             "description":
                 "你知道天空为什么是蓝色的吗?\n那是因为我!我要它是蓝色,所以它就是蓝色的。\n\n你知道为什么火是热的吗?那也是因为我。\n我要它是热的,它就得是热的。\n\n你知道为什么你要出生吗?\n那也是因为我。",
             "tags": ["全部", "娱乐"]
